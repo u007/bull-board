@@ -20,7 +20,7 @@ export function useSelectedStatuses(): SelectedStatuses {
     const status = getActiveStatus(search);
 
     if (activeQueueName) {
-      setSelectedStatuses({ ...selectedStatuses, [activeQueueName]: status });
+      setSelectedStatuses((prev) => ({ ...prev, [activeQueueName]: status }));
     }
   }, [search, activeQueueName]);
 
