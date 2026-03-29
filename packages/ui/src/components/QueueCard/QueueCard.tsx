@@ -20,9 +20,7 @@ export const QueueCard = ({ queue }: IQueueCardProps) => {
         <NavLink to={links.queuePage(queue.name)} className={s.link}>
           {queue.displayName}
         </NavLink>
-        {queue.isPaused && (
-          <span className={s.pausedBadge}>[ {t('MENU.PAUSED')} ]</span>
-        )}
+        {queue.isPaused && <span className={s.pausedBadge}>[ {t('MENU.PAUSED')} ]</span>}
       </div>
       <QueueStats queue={queue} />
     </Card>

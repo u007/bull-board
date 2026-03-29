@@ -1,8 +1,4 @@
-import {
-  BullBoardRequest,
-  ControllerHandlerReturnType,
-  QueueJob,
-} from '../../typings/app';
+import { BullBoardRequest, ControllerHandlerReturnType, QueueJob } from '../../typings/app';
 import { queueProvider } from '../providers/queue';
 import { jobProvider } from '../providers/job';
 

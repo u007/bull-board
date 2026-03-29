@@ -50,7 +50,7 @@ module.exports = function (sails) {
         createBullBoard({
           queues: [new BullMQAdapter(exampleBullMq)],
           serverAdapter,
-        })
+        });
 
         bullboard.use('/ui', serverAdapter.getRouter());
 
@@ -68,9 +68,9 @@ module.exports = function (sails) {
           });
         });
 
-        const basePath = `http://127.0.0.1:${sails.config.port||1337}/`;
+        const basePath = `http://127.0.0.1:${sails.config.port || 1337}/`;
 
-        sails.log.info(`Bull Board running on: ${basePath}`)
+        sails.log.info(`Bull Board running on: ${basePath}`);
         sails.log.info(`For the UI, open ${basePath}ui`);
         sails.log.info('Make sure Redis is running on port 6379 by default');
         sails.log.info('To populate the queue, run:');

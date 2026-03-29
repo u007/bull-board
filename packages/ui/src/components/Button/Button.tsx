@@ -2,11 +2,10 @@ import React from 'react';
 import s from './Button.module.css';
 import cn from 'clsx';
 
-interface ButtonProps
-  extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+interface ButtonProps extends React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> {
   isActive?: boolean;
   theme?: 'basic' | 'primary' | 'default';
 }
